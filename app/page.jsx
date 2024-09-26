@@ -16,7 +16,7 @@ const page = () => {
   useEffect(()=>{
     const fetchData=async()=>{
       try {
-        const response=await fetch('https://bright-ants-d6d02dc50f.strapiapp.com/api/dummies?populate=*');
+        const response=await fetch('https://bright-ants-d6d02dc50f.strapiapp.com/api/dummies?populate=*&sort=id:asc');
         const result=await response.json();
         console.log('result', result);
         setData(result.data);
